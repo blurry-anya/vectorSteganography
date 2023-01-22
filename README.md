@@ -19,6 +19,3 @@ Additional:
 
 ## NOTE
     Experiments page does not have any visual representation, all obtained data is shown in the console. For any additional information you can get acquainted with my publications [here](https://www.scopus.com/authid/detail.uri?authorId=57208665914).
-
-    
-    
