@@ -1,6 +1,6 @@
 # Research about steganographic methods of data concealing into vector graphic images
 
-    This project was created for a bachelor graduation work and is dedicated to an implementation of Kinzeryaviy's methods of data concealing in vector images.
+This project was created for a bachelor graduation work and is dedicated to an implementation of Kinzeryaviy's methods of data concealing in vector images.
 
 The key points of the implemantation:
 - SVG images
@@ -18,7 +18,7 @@ Additional:
 - decoding requires stegokeys saved while encoding
 
 ## NOTE
-    Experiments page does not have any visual representation, all obtained data is shown in the console. For any additional information you can get acquainted with my publications [here](https://www.scopus.com/authid/detail.uri?authorId=57208665914).
+Experiments page does not have any visual representation, all obtained data is shown in the console. For any additional information you can get acquainted with my publications [here](https://www.scopus.com/authid/detail.uri?authorId=57208665914).
 
     
     
