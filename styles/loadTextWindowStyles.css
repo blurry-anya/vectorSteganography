@@ -1,0 +1,90 @@
+#loadMessageWindow{
+    border: 2px solid #e3dbdbff;
+    width: 40vw;
+    height: 48vh;
+    margin: auto 0;
+    /*background-color: #d0e0df;*/
+    background: #6c5353ff;
+    position: absolute;
+}
+
+#loadMessageWindowHeader{
+    width: 100%;
+    height: 6%;
+    border-bottom: 2px solid #e3dbdbff;
+    /*border-bottom: 2px solid grey;*/
+}
+#loadMessageWindowBody{
+    width: 100%;
+    height: 80%;
+}
+.loadMessageWindowFooter{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    /*align-content: center;*/
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+#loadMessageWindowCloseBtn, #loadMessageWindowLoadBtn{
+    width: 15%;
+    height: 90%;
+    padding: 2.5% 0;
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    /*line-height: 2vw;*/
+}
+#loadMessageWindowLoadBtn{
+    width: 35%;
+}
+#loadMessageWindowCloseBtn:hover, #loadMessageWindowLoadBtn:hover{
+    cursor: pointer;
+    color: #e3dbdbff;
+    transition-duration: 0.2s;
+}
+.input{
+    width: 100%;
+    height: 89%;
+    display: flex;
+    justify-content: center;
+}
+
+#message, #decodedMessage{
+    width: 90%;
+    height: 90%;
+    padding: 1%;
+    color: black;
+    border-radius: 2%;
+    align-self: center;
+    overflow-y: visible;
+}
+.textBtn-wrapper{
+    width: 90%;
+    height: 11%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.loadTextBtn{
+    width: 8%;
+    height: 95%;
+    border: #6c5353ff;
+    color: #6c5353ff;
+    /*background-color: white;*/
+    border-radius: 5px;
+    font-family: monospace;
+    transition-duration: 0.4s;
+}
+
+.loadTextBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: inherit;
+    border: 1px solid white;
+}
+.noDisplay{
+    display: none;
+}

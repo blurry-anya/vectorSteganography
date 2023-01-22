@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diploma</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/loadTextWindowStyles.css">
+    <link rel="stylesheet" href="../styles/expStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="experiment-wrapper">
+    <div id="experiment-btn">Experiments</div>
+</div>
+
+<div class="methods-wrapper">
+    <div id="bitMethod" class='methods notSelected'>Bit</div>
+    <div id="patternMethod" class='methods selected'>Pattern</div>
+<!--    <div id="testMethod" class='methods notSelected'>Test</div>-->
+</div>
+
+
+<div id="encryptionCompleteWindow" class="noDisplay">
+    <div>Your image was encrypted!</div>
+</div>
+
+<div class="noDisplay" id="loadMessageWindow">
+    <div id='loadMessageWindowHeader'></div>
+    <div id='loadMessageWindowBody'>
+        <div class='input'>
+            <textarea placeholder="Enter message for encoding.." type="text" id='message'></textarea>
+        </div>
+        <div class="textBtn-wrapper">
+            <button class='loadTextBtn'>1</button>
+            <button class='loadTextBtn'>2</button>
+            <button class='loadTextBtn'>3</button>
+            <button class='loadTextBtn'>4</button>
+            <button class='loadTextBtn'>5</button>
+            <button class='loadTextBtn'>6</button>
+            <button class='loadTextBtn'>7</button>
+            <button class='loadTextBtn'>8</button>
+            <button class='loadTextBtn'>9</button>
+            <button class='loadTextBtn'>10</button>
+        </div>
+
+    </div>
+    <div class="loadMessageWindowFooter">
+        <div id='loadMessageWindowLoadBtn'>Load text from file
+            <input type="file" id="textFileSelect" style="display: none">
+        </div>
+        <div id='loadMessageWindowCloseBtn'>Close</div>
+    </div>
+
+</div>
+
+<div class="global-wrapper">
+    <header>
+        <span>Bezier curves encoding</span>
+    </header>
+    <div class="main-wrapper">
+        <div class="main-panel">
+            <div class="loadBtn-wrapper">
+                <div class="container-wrapper">
+                    <object type='image/svg+xml' data='' id="objectContainer"></object>
+                </div>
+            </div>
+            <div class="parameters-panel-wrapper">
+                <div class="staticImageData">
+                    <div><span>Loaded file:</span><span id="file-name"></span></div>
+                    <div><span>Curved elements in image:</span><span id="file-curves"></span></div>
+                    <div><span>Bezier curves:</span><span id="file-bezier-curves"></span></div>
+                    <div><span>Extracted curves:</span><span id="file-extracted-curves"></span></div>
+                    <div><span>Available curves:</span><span id="file-available-curves"></span></div>
+                    <div><span>Recommended input size:</span><span id="file-inputSize"></span></div>
+                </div>
+                <div class="methodsParameters">
+                    <div class="bitParameters noDisplay">
+                        <div><span>Precision:</span><span id="bitPrecision"></span></div>
+                        <div><span>Accuracy:</span><span id="bitAccuracy"></span></div>
+                        <div><span>Max bit quantity:</span><span id="bitMaxBitQuantity"></span></div>
+                        <div><span>Delta step:</span><span id="bitDeltaStep"></span></div>
+                    </div>
+                    <div class="patternParameters noDisplay">
+                        <div><span>Precision:</span><span id="patternPrecision"></span></div>
+                        <div><span>Accuracy:</span><span id="patternAccuracy"></span></div>
+                        <div><span>Max bit quantity:</span><span id="patternMaxBitQuantity"></span></div>
+                        <div><span>Pattern length:</span><span id="patternLength"></span></div>
+                        <div><span>Start step:</span><span id="patternStartStep"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loading-bar">
+                <progress value="0" id="progress"></progress>
+                <label for="progress" id="progress-label">0%</label>
+            </div>
+
+        </div>
+        <div class="bottom-panel">
+            <div id=loadInputBtn>Load message</div>
+            <div id=loadSVGBtn> Load SVG
+                <input type="file" id="fileSelect" style="display: none" accept="image/svg+xml">
+            </div>
+            <div id=loadKeysBtn class="noDisplay"> Load keys
+                <input type="file" id="fileSelectKeys" style="display: none" accept=".txt">
+            </div>
+            <div id=encodeBtn>Encode</div>
+            <div id=decodeBtn>Decode</div>
+            <div id=downloadBtn>Download</div>
+        </div>
+
+        <script src="../js/main.js"></script>
+        <script src="../js/additional.js"></script>
+        <script src="../js/dragMessageWindow.js"></script>
+        <script src="../js/point.js"></script>
+        <script src="../js/curve.js"></script>
+        <script src="../js/imageHandler.js"></script>
+        <script src="../js/encode.js"></script>
+        <script src="../js/decode.js"></script>
+        <script src="../js/experimental.js"></script>
+
+
+    </div>
+
+    <footer>
+        <div class='input'>
+            <textarea placeholder="Decoded message will be displayed here..." type="text" id='decodedMessage'
+                      readonly></textarea>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
