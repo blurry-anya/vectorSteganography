@@ -7,7 +7,7 @@ let testMessage = '01010101';
 let testMessagePattern = '01010111'
 
 // let experimentalMessage = 'Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection';
-let experimentalMessage = 'Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection. Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection. Steganography is the hiding technique...';
+// let experimentalMessage = 'Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection. Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection. Steganography is the hiding technique...';
 // let experimentalMessage = 'Concealing in the vector image';
 // let experimentalMessage = 'The vector image steganography';
 
@@ -193,8 +193,9 @@ document.getElementById('encodeBtn').addEventListener('click', function () {
             progress.max = parseInt(document.getElementById('file-extracted-curves').innerHTML);
             let percent = 0;
             console.log('Obtained points from curves in an image: ', normalizedCurves);
-            // let input = convertTextToBinary(document.getElementById('message').innerHTML);
-            let input = convertTextToBinary(experimentalMessage);
+            let input = convertTextToBinary(document.getElementById('message').value);
+            console.log(input)
+            // let input = convertTextToBinary(experimentalMessage);
             if (input) {
                 console.log('Длина бинарного сообщения:', input.length);
                 console.log('Количество сегментов для встаивания:', normalizedCurves.flat(2).length)
@@ -440,7 +441,7 @@ document.getElementById('loadInputBtn').addEventListener('click', function () {
             let request = new XMLHttpRequest();
             request.open('GET', '../texts/'.concat(path.slice(index, path.length)));
             request.onreadystatechange = function () {
-                document.getElementById('message').innerText = request.responseText;
+                document.getElementById('message').value = request.responseText;
             }
             request.send();
         });
@@ -448,9 +449,10 @@ document.getElementById('loadInputBtn').addEventListener('click', function () {
     let texts = document.getElementsByClassName('loadTextBtn');
     for (let i = 0; i < texts.length; i++) {
         texts[i].addEventListener('click', function () {
-            document.getElementById('message').innerText = readyTexts[i];
+            document.getElementById('message').value = readyTexts[i];
         })
     }
+    
 })
 
 /*document.getElementById('loadKeysBtn').addEventListener('click', function () {
